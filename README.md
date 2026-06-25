@@ -59,6 +59,59 @@ docs/
   Project documentation and summaries
 ```
 
+## Setup Instructions
+
+Create and activate a virtual environment.
+
+```cmd
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+Install the required dependencies.
+
+```cmd
+pip install -r requirements.txt
+```
+
+## Model File
+
+The trained model file is not included in this repository.
+
+To run predictions locally, place the trained model file inside a local `models` directory.
+
+Expected path:
+
+```text
+models/cnn_pilot_saving_model.h5
+```
+
+The `models` directory is ignored by Git because trained model files can be large and are not part of the source code.
+
+## Running the Application
+
+Run the Flask application from the project root.
+
+```cmd
+python -m src.app
+```
+
+Then open the local server address in the browser.
+
+```text
+http://127.0.0.1:5000
+```
+
+## Current Environment Note
+
+If the application does not start because of a NumPy compatibility issue, recreate the virtual environment and install compatible dependency versions.
+
+A common fix is to use a NumPy version below 2.
+
+```cmd
+pip install "numpy<2"
+```
+
 ## Project Status
 
 This project was originally developed as an academic group project.
