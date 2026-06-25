@@ -1,7 +1,8 @@
-numpy
+numpy<2
 Pillow
 tensorflow
 keras
 scikit-learn
 matplotlib
 Flask
+werkzeug

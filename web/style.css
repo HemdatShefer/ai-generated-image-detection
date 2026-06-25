@@ -329,7 +329,13 @@ h4{
     margin: 2.5rem 0;
   }
 }
+.dodel {
+  visibility: hidden;
+}
 
+.dodel.open {
+  visibility: visible;
+}
 /* 
 .zero__button{
   padding: 10px 25px;

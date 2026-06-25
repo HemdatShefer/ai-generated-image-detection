@@ -5,3 +5,7 @@ docs/*.pptx
 *.zip
 uploads/
 models/
+.venv/
+.vscode/
+__pycache__/
+*.pyc
