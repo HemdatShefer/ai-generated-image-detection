@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #161616, #000000);
+}
+
+.drag-area{
+  border: 2px dashed #fff;
+  height: 400px;
+  width: 718px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.drag-area.active{
+  border: 2px solid #fff;
+}
+
+.drag-area .icon{
+  font-size: 100px;
+  color: #fff;
+}
+
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+
+.drag-area button{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: #000000;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.drag-area {
+  margin-bottom: 50px; /* Adjust the value for desired spacing */
+}
+
+
+/* Hero Section */
+.hero {
+  padding: 10px 0;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero__heading {
+  font-size: 50px;
+  background: #8418e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #8418e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #8418e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mo-text-fill-color: transparent;
+}
+
+.hero__description {
+  font-size: 60px;
+  background: #8418e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7ab1f,
+    #8418e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7ab1f,
+    #8418e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+  .hero__heading {
+    font-size: 60px;
+  }
+
+  .hero__description {
+    font-size: 40px;
+  }
+}
+
+
+/*####################### */
+
+Zero Section 
+.zero {
+  padding: 50px 0;
+}
+
+.zero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+
+.zero__heading {
+  font-size: 50px;
+  background: #8418e9;
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #8418e9
+  );
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #8418e9
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mo-text-fill-color: transparent;
+}
+
+.zero__description {
+  font-size: 60px;
+  background: #8418e9;
+  background: -webkit-linear-gradient(
+    to right,
+    #f7ab1f,
+    #8418e9
+  );
+  background: linear-gradient(
+    to right,
+    #f7ab1f,
+    #8418e9
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.zero__button {
+  font-size: 1.8rem;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  padding: 20px 60px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.zero__button a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.zero__button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  /*background: #ff1ead; does the color-changing effect*/ 
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.zero__button:hover {
+  color: #fff;
+}
+
+.zero__button:hover:after {
+  width: 100%;
+}
+
+.zero__popup {
+  background: transparent;
+  border-radius: 6px;
+  padding: 0 30px 30px;
+  visibility: visible;
+  transition: transform 0.4s, top 0.42;
+}
+
+.open-zero__popup{
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+h3{
+  font-size: 45px;
+  background: #000000;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white; /* Border thickness and color */
+}
+
+h4{
+  font-size: 50px;
+  background: linear-gradient(
+    to right,
+    #8418e9,
+    #ff6a00
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white; /* Border thickness and color */
+}
+
+.zero__popup button{
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px 0;
+  color: #000000;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.zero__popup button a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.zero__popup button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.zero__popup button:hover {
+  color: #fff;
+}
+
+.zero__popup button:hover:after {
+  width: 100%;
+}
+
+.highlight {
+  border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+@media screen and (max-width: 700px) {
+  .zero__heading {
+    font-size: 60px;
+  }
+
+  .zero__description {
+    font-size: 40px;
+  }
+
+  .zero__button {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}
+
+/* 
+.zero__button{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #8418e9
+  );
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+*/
+/**/
+/*
+.dodel button{
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px 0;
+  color: #000000;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dodle button:active{
+  opacity: 0.8;
+}
+
+.dodel button a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.dodel button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.dodel button:hover {
+  color: #fff;
+}
+
+.dodel button:hover:after {
+  width: 100%;
+}
+
+.highlight {
+  border-bottom: 4px solid rgb(132, 0, 255);
+}
+*/
+
+
+
+button{
+  background-image: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  border-radius: 4px;
+  border: 0;
+  color: #000000;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  outline: none;
+  font-size: 18px;
+}
+
+button a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}
+
+button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover:after {
+  width: 100%;
+}
+
+.dodel{
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dodel.open{
+  opacity: 1;
+  z-index: 999;
+}
+
+.dodel-inner{
+  /*background-color: #fff;
+  border-radius: 5px;*/
+  background-color: #000000;
+  border: 10px dashed #fff;
+  /**/
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  padding: 15px 25px;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+}
+
+.dodel-inner h1{
+  margin: 0;
+}
+
+.dodel-inner h2{
+  line-height: 24px;
+  margin: 10px 0;
+}
+
