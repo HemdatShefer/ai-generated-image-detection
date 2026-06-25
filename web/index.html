@@ -1,73 +1,56 @@
-<!DOCTYPE  html>
-<!--ML project -->
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag & Drop or Browse: File Upload</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealityCheck, AI Generated Image Detection</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-
-  <!-- Main Area -->
   <div class="main" id="home">
-
-    <!-- Hero Section -->
     <div class="hero">
       <div class="hero__container">
-        <h1 class="hero__heading">RealityCheck </h1>
+        <h1 class="hero__heading">RealityCheck</h1>
         <p class="hero__description">Authentic or Synthetic</p>
-        <!-- button <button class="main__btn"><a href="#">Explore</a></button> -->
       </div>
     </div>
-    
+
     <div class="drag-area">
-      <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+      <div class="icon">
+        <i class="fas fa-cloud-upload-alt"></i>
+      </div>
+
       <header>Drag & Drop to Upload File</header>
       <span>OR</span>
-      <button>Browse File</button>
-      <input type="file" hidden>
+      <button type="button" id="browseButton">Browse File</button>
+      <input type="file" id="fileInput" accept="image/jpeg, image/jpg, image/png" hidden />
     </div>
 
-    <!-- Zero Section -->
     <div class="zero">
       <div class="zero__container">
-        <!--
-        <button type="btn" class="zero__button" onclick="openZero__popup()">Reality check, please</button>
-        <div class="zero__popup" id="zero__popup">
-          <h1>Spoiler alert:</h1>
-          <h1 style="display: inline-block;">It's </h1>
-          <h2 style="display: inline-block;">REAL/FAKE!</h2>
-          <button type="btn" onclick="closeZero__popup()">Thanks</button>
-        </div>
-        -->
-        <button id="openDodel">Reality check, please</button>
-        <div class="dodel" id="dodel">
+        <button type="button" id="checkButton">Reality check, please</button>
+
+        <div class="dodel" id="resultModal">
           <div class="dodel-inner">
             <h3>Spoiler alert:</h3>
             <h3 style="display: inline-block;">It's </h3>
-            <h4 style="display: inline-block;">REAL/FAKE!</h4>
-            <!--<button id="colseDodel">Thanks</button>-->
+            <h4 id="resultLabel" style="display: inline-block;">Waiting for image</h4>
+            <p id="resultConfidence"></p>
+            <p id="resultError"></p>
+            <button type="button" id="closeButton">Thanks</button>
           </div>
         </div>
       </div>
     </div>
-  
   </div>
 
-  <script src="script.js">
-    let zero__popup = document.getElementById("zero__popup");
-    
-    function openZero__popup(){
-      zero__popup.classList.add("openZero__popup");
-    }
-
-    function closeZero__popup(){
-      zero__popup.classList.remove("openZero__popup");
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
+
 </html>
