@@ -3,3 +3,5 @@ reference_not_uploaded/
 docs/*.docx
 docs/*.pptx
 *.zip
+uploads/
+models/
